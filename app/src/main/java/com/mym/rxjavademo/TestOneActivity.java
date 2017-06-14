@@ -94,7 +94,7 @@ public class TestOneActivity extends AppCompatActivity {
 
                     @Override
                     public void onNext(@NonNull DouBanBean douBanBean) {
-
+                        Toast.makeText(TestOneActivity.this, "这里是模拟登陆，数据成功返回了", Toast.LENGTH_SHORT).show();//先根据注册的响应结果去做一些操作
                         stringBuilder.append(douBanBean.getTitle() + "模拟登陆\r\ncount:" + douBanBean.getCount() + "\r\n");
                         for (int i = 0; i < douBanBean.getSubjects().size(); i++) {
                             stringBuilder.append(i + 1 + "、" + douBanBean.getSubjects().get(i).getTitle() + "\r\n");
